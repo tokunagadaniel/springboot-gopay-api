@@ -12,7 +12,7 @@
 	<artifactId>springboot-gopay-api</artifactId>
 	<version>0.0.1</version>
 	<name>springboot-gopay-api</name>
-	<description>Desenvolvimento do Desafio2</description>
+	<description></description>
 
 	<properties>
 		<java.version>11</java.version>

@@ -20,5 +20,5 @@ A solução foi realizada com Spring Boot e Cassandra.
         * cd ..
         ```
     4. mvn install
-    5. java -jar desafio2-0.0.1.jar
+    5. java -jar springboot-gopay-api-0.0.1.jar
     6. Importar a collection no diretório "postman" para realizar os testes
