@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "0b5ceea7-efad-4dd6-99fc-399a9683e25c",
+		"name": "PayGo Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cria Conta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idConta\": \"cca8a174-c011-11ec-9d64-0242ac120002\",\r\n    \"idPessoa\": \"cca8a174-c011-11ec-9d64-0242ac120002\",\r\n    \"limiteSaqueDiario\": 100,\r\n    \"tipoConta\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/conta/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bloqueia Conta",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/conta/block/cca8a174-c011-11ec-9d64-0242ac120002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"conta",
+						"block",
+						"cca8a174-c011-11ec-9d64-0242ac120002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Saldo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/consulta/saldo/cca8a174-c011-11ec-9d64-0242ac120002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consulta",
+						"saldo",
+						"cca8a174-c011-11ec-9d64-0242ac120002"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Extrato - Período",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/consulta/extrato?id_conta=cca8a174-c011-11ec-9d64-0242ac120002&data_inicio=18/04/2022&data_fim=19/04/2022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consulta",
+						"extrato"
+					],
+					"query": [
+						{
+							"key": "id_conta",
+							"value": "cca8a174-c011-11ec-9d64-0242ac120002"
+						},
+						{
+							"key": "data_inicio",
+							"value": "18/04/2022"
+						},
+						{
+							"key": "data_fim",
+							"value": "19/04/2022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Extrato",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/consulta/extrato?id_conta=cca8a174-c011-11ec-9d64-0242ac120002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"consulta",
+						"extrato"
+					],
+					"query": [
+						{
+							"key": "id_conta",
+							"value": "cca8a174-c011-11ec-9d64-0242ac120002"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposita",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idConta\": \"cca8a174-c011-11ec-9d64-0242ac120002\",\r\n    \"valor\": 150\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transacao/deposita",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacao",
+						"deposita"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Saca",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idConta\": \"cca8a174-c011-11ec-9d64-0242ac120002\",\r\n    \"valor\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transacao/saque",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transacao",
+						"saque"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
