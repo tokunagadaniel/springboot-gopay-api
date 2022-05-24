@@ -1,6 +1,5 @@
 package br.com.tokunaga.adapter.datastore.repository;
 
-
 import br.com.tokunaga.adapter.datastore.entity.TransacaoEntity;
 import org.springframework.data.cassandra.repository.CassandraRepository;
 import org.springframework.stereotype.Repository;
