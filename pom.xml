@@ -8,10 +8,10 @@
 		<version>2.6.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>br.com.dock</groupId>
-	<artifactId>desafio2</artifactId>
+	<groupId>br.com.tokunaga</groupId>
+	<artifactId>springboot-gopay-api</artifactId>
 	<version>0.0.1</version>
-	<name>Desafio2</name>
+	<name>springboot-gopay-api</name>
 	<description>Desenvolvimento do Desafio2</description>
 
 	<properties>
